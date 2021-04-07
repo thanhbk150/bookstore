@@ -1,0 +1,21 @@
+1. Environment
+	- Rails 6.1.3
+	- Ruby 3.0.0
+	- MySQL
+	- NodeJS
+
+2. How to
+	- Importing the database from the file books_development.sql
+	- Bundle install
+	- Install webpacker
+		+ rails webpacker:install -n
+		+ yarn install
+	- Solr
+		+ rails generate sunspot_rails:install
+		+ bundle exec rake sunspot:solr:start
+		+ bundle exec rake sunspot:reindex
+	- Start Puma
+
+3. Account for test
+	email: demo@example.com
+	pass: Th@nhNguy3n	

@@ -1,0 +1,78 @@
+<h2>Log in</h2>
+<div id="form-login">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">
+      <%= f.email_field :email, autofocus: true, class: 'form-control', autocomplete: "email", placeholder: "Email" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password, class: 'form-control', autocomplete: "current-password", placeholder: "Password" %>
+    </div>
+
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+    <% end %>
+
+    <div class="actions">
+      <%= f.submit "Log in", class: 'btn-submit' %>
+    </div>
+  <% end %>
+</div>
+<style type="text/css">
+  body {
+    font-family: 'Bai Jamjuree', Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  #application {
+    text-align: center;
+    padding-top: 150px;
+  }
+  h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  #form-login {
+    width: 300px;
+    margin: auto;
+  }
+  .field {
+    margin-bottom: 15px;
+  }
+  .form-control {
+    background-color: #ffffff !important;
+    border: 1px solid #e4e7ea;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #565656;
+    height: 22px;
+    padding: 7px 12px;
+    -webkit-transition: all 300ms linear 0s;
+    -o-transition: all 300ms linear 0s;
+    transition: all 300ms linear 0s;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    font-size: 16px;
+  }
+  .btn-submit {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    background: #2cabe3;
+    border: 1px solid #2cabe3;
+    border-radius: 60px;
+    color: white;
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+</style>
